@@ -14,8 +14,9 @@
         "LCD_Driver.h",
         "SPI_RAM.cpp",
         "SPI_RAM.h",
-		"shims.d.ts",
-        "enums.d.ts"
+	"shims.d.ts",
+        "enums.d.ts",
+        "_locales/ja/LCD1in8-strings.json"
     ],
     "testFiles": [
         "test.ts"

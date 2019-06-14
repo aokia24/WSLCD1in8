@@ -34,7 +34,7 @@ namespace LCD1IN8{
     //% block="Filling Color %Color"
     //% shim=LCD1IN8::LCD_Filling
     //% weight=194
-    export function LCD_Filling(Color: number): void {
+    export function LCD_Filling(Color: LCD_COLOR): void {
         return;
     }
 

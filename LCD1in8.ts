@@ -83,7 +83,7 @@ namespace LCD1IN8{
     //% Color.min=0 Color.max=65535
     //% shim=LCD1IN8::DrawPoint
     //% weight=150
-    export function DrawPoint(x: number, y: number, Color: number, Dot: DOT_PIXEL): void {
+    export function DrawPoint(x: number, y: number, Color: LCD_COLOR, Dot: DOT_PIXEL): void {
         return;
     }
 
@@ -94,7 +94,7 @@ namespace LCD1IN8{
     //% Xend.min=1 Xend.max=160 Yend.min=1 Yend.max=128
     //% Color.min=0 Color.max=65535
     //% weight=140
-    export function DrawLine(Xstart: number, Ystart: number, Xend: number, Yend: number, Color: number, Line_width: DOT_PIXEL, Line_Style: LINE_STYLE): void {
+    export function DrawLine(Xstart: number, Ystart: number, Xend: number, Yend: number, Color: LCD_COLOR, Line_width: DOT_PIXEL, Line_Style: LINE_STYLE): void {
         if (Xstart > Xend)
             Swop_AB(Xstart, Xend);
         if (Ystart > Yend)
@@ -143,7 +143,7 @@ namespace LCD1IN8{
     //% Xend2.min=1 Xend2.max=160 Yend2.min=1 Yend2.max=128
     //% Color.min=0 Color.max=65535
     //% weight=130
-    export function DrawRectangle(Xstart2: number, Ystart2: number, Xend2: number, Yend2: number, Color: number, Filled: DRAW_FILL, Dot_Pixel: DOT_PIXEL): void {
+    export function DrawRectangle(Xstart2: number, Ystart2: number, Xend2: number, Yend2: number, Color: LCD_COLOR, Filled: DRAW_FILL, Dot_Pixel: DOT_PIXEL): void {
         if (Xstart2 > Xend2)
             Swop_AB(Xstart2, Xend2);
         if (Ystart2 > Yend2)
@@ -169,7 +169,7 @@ namespace LCD1IN8{
     //% Radius.min=0 Radius.max=160
     //% Color.min=0 Color.max=65535
     //% weight=120
-    export function DrawCircle(X_Center: number, Y_Center: number, Radius: number, Color: number, Draw_Fill: DRAW_FILL, Dot_Pixel: DOT_PIXEL): void {
+    export function DrawCircle(X_Center: number, Y_Center: number, Radius: number, Color: LCD_COLOR, Draw_Fill: DRAW_FILL, Dot_Pixel: DOT_PIXEL): void {
         //Draw a circle from(0, R) as a starting point
         let XCurrent = 0;
         let YCurrent = Radius;
@@ -221,7 +221,7 @@ namespace LCD1IN8{
     }
 
     //% shim=LCD1IN8::DisChar_1207
-    function DisChar_1207(Xchar: number, Ychar: number, Char_Offset: number, Color: number): void {
+    function DisChar_1207(Xchar: number, Ychar: number, Char_Offset: number, Color: LCD_COLOR): void {
         return;
     }
 
@@ -231,7 +231,7 @@ namespace LCD1IN8{
     //% Xchar.min=1 Xchar.max=160 Ychar.min=1 Ychar.max=128
     //% Color.min=0 Color.max=65535
     //% weight=100
-    export function DisString(Xchar: number, Ychar: number, ch: string, Color: number): void {
+    export function DisString(Xchar: number, Ychar: number, ch: string, Color: LCD_COLOR): void {
         let Xpoint = Xchar;
         let Ypoint = Ychar;
         let Font_Height = 12;
@@ -266,7 +266,7 @@ namespace LCD1IN8{
     //% Xnum.min=1 Xnum.max=160 Ynum.min=1 Ynum.max=128
     //% Color.min=0 Color.max=65535
     //% weight=100
-    export function DisNumber(Xnum: number, Ynum: number, num: number, Color: number): void {
+    export function DisNumber(Xnum: number, Ynum: number, num: number, Color: LCD_COLOR): void {
         let Xpoint = Xnum;
         let Ypoint = Ynum;
         DisString(Xnum, Ynum, num + "", Color);
